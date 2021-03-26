@@ -1,0 +1,37 @@
+{
+  "index_patterns": [
+    "toiot*"
+  ],
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings" : {
+    "properties" : {
+      "name" : {
+        "type" : "keyword"
+      },
+      "node" : {
+        "properties" : {
+          "sink_name" : {
+            "type" : "keyword"
+          },
+          "location" : {
+            "type": "geo_point"
+          },
+          "name" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "sensor_id" : {
+        "type" : "long"
+      },
+      "sensor_name" : {
+        "type" : "keyword"
+      },
+      "timestamp" : {
+        "type" : "date"
+      }
+    }
+  }
+}
